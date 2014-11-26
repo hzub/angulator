@@ -1,0 +1,29 @@
+<html ng-app="kolegator">
+
+<head>
+    <title>Kolegator A2000</title>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="controllers/addController.js"></script>
+    <script src="controllers/listController.js"></script>
+    <script src="controllers/menuController.js"></script>
+
+    <script src="services/kolegaService.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="menuController">
+        <h2>Menó</h2>
+        <a href="/#/">Lista</a>
+        <a href="/#/add">Dodaj kolegę</a> | Liczba kolegów: {{liczbaKolegow}}
+    </div>
+    
+    <hr/>
+    <div ng-view></div>
+</body>
+
+</html>
